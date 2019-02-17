@@ -932,14 +932,14 @@ sub english_titles {
 	      'November', 'December');
 # These words will be omitted from filenames derived
 # from section-titles, when using  -long_titles
-    $GENERIC_WORDS = "and|the|of|for|by|a|an|to";
+    $GENERIC_WORDS = "";
 }
 
 # These words will be omitted from filenames derived
 # from section-titles, when using  -long_titles
 # Override this value within a  <language>_titles  subroutine.
 #
-$GENERIC_WORDS = "and|the|of|for|by|a|an|to";
+$GENERIC_WORDS = "";
 
 
 # Replace "english" with another language provided
