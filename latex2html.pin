@@ -9645,8 +9645,6 @@ sub make_name {
 	$_ = $saved;
     }
     if ($title) {
-	#ensure no more than 32 characters, including .html extension
-	$title =~ s/^(.{1,27}).*$/$1/;
     	++$OUT_NODE;
 	join("", ${PREFIX}, $title, $EXTN);
     } else {
