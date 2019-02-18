@@ -525,7 +525,7 @@ $TMP_PREFIX = "l2h" unless ($TMP_PREFIX);
 # _TODO_ this should be determined by configure
 $DVIPS_SAFE = 1;
 
-$CHARSET = $charset || 'utf-8';
+$CHARSET = $charset || 'iso-8859-1';
 
 # This will be set to 1 by polyglossia.perl to mark its own presence
 $POLYGLOSSIA = 0;
@@ -15905,8 +15905,9 @@ sub initialise {
     print "...producing markup for HTML version $HTML_VERSION  ";
     print ($HTML_OPTIONS ? "with $HTML_OPTIONS extensions\n\n\n" : "\n\n\n");
 
-    # unicode by default
-    &do_require_extension('unicode');
+    # load the character defs for latin-1, but don't set the charset yet
+    &do_require_extension('latin1');
+    $charset = $CHARSET = $PREV_CHARSET = '';
 
     if ($HTML_VERSION =~ /(2.0|3.0|3.2|4.0|4.1|5.0)/) {
 	# Require the version specific file 

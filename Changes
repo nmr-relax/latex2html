@@ -134,7 +134,6 @@
 #		- pdflatex by default
 #		- dvipng by default
 #		- html 5
-#		- unicode input and output by default
 #		- Support for packages luainputenc and polyglossia
 #		- Support for picture generation via pdflatex, lualatex
 #		  or dvilualatex (options -use_pdftex, -use_luatex,
